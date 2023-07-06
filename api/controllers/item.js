@@ -52,9 +52,9 @@ exports.read = async (req, res) => {
 
 exports.update = async (req, res) => {
   try {
-    const { id } = req.body;
+    const { _id } = req.body;
 
-    await Item.findOneAndUpdate({ _id: id }, req.body, {
+    await Item.findOneAndUpdate({ _id }, req.body, {
       new: true,
     }).exec();
 
